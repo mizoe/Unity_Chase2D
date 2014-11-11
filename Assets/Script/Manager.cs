@@ -14,11 +14,12 @@ public class Manager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print ("_enemy:" + _enemy.transform.position);
-		print ("player:" + player.transform.position);
+		//print ("_enemy:" + _enemy.transform.position);
+		//print ("player:" + player.transform.position);
+
 		//vector2 enemy > player
 		Vector2 dir = -1 * _enemy.transform.position + player.transform.position;
-		print ("dir:" + dir.ToString());
+		//print ("dir:" + dir.ToString());
 		_enemy.rigidbody2D.velocity = dir.normalized * enemyVel; //normalize the direction vector, and get the velocity vector
 	}
 
