@@ -331,5 +331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   follower: {fileID: 100000, guid: 032235f390349a243984848abd350d13, type: 2}
   player: {fileID: 424240842}
+  enemy: {fileID: 100000, guid: f35f93c2d8618ae48a7cc7275457031e, type: 2}
   followerDistance: 1.5
   maxFollowers: 4

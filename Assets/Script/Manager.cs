@@ -6,13 +6,15 @@ public class Manager : MonoBehaviour {
 	// Player prefab
 	public GameObject follower;
 	public GameObject player;
-	private List<GameObject> _followers = new List<GameObject>();
+	public GameObject enemy;   //prefab
+	private GameObject _enemy; //instance
+	private List<GameObject> _followers = new List<GameObject>(); // list of instance
 	private float followerVel = 5f;
 	public float followerDistance = 1f;
 	public int maxFollowers = 4;
 	// Use this for initialization
 	void Start () {
-		InstantiateFollower ();
+		buildInstance ();
 		// set the folloer speed same as the player
 		followerVel = Player.speed; //public static
 	}
@@ -37,11 +39,14 @@ public class Manager : MonoBehaviour {
 			else
 				_followers[i].rigidbody2D.velocity = new Vector2(0f,0f);
 		}
+		Vector2 enemyToPlayer = -1 * _enemy.transform.position + player.transform.position;
+		_enemy.rigidbody2D.velocity = enemyToPlayer.normalized * followerVel * 0.5f; //normalize the direction vector, and get the velocity vector
 	}
-
-	public void InstantiateFollower () {
+	
+	public void buildInstance () {
 		for (int i=0; i<maxFollowers; i++) {
 			_followers.Add(Instantiate (follower, follower.transform.position, follower.transform.rotation) as GameObject);
 		}
+		_enemy = Instantiate (enemy, enemy.transform.position, enemy.transform.rotation) as GameObject;
 	}
 }
