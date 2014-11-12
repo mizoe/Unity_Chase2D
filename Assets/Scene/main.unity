@@ -105,7 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e807996720c0b4fab3d15e1bbcc663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!61 &424240844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -330,5 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d8bc92acffd5f4dbb56135c0898ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 100000, guid: f35f93c2d8618ae48a7cc7275457031e, type: 2}
+  follower: {fileID: 100000, guid: 032235f390349a243984848abd350d13, type: 2}
   player: {fileID: 424240842}
+  followerDistance: 1.5
+  maxFollowers: 4

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	public float speed = 1f;
+	public static float speed = 10f;
 	// Use this for initialization
 	void Start () {
 	
@@ -36,7 +36,7 @@ public class Player : MonoBehaviour {
 		// プレイヤーの座標を取得 get the player position
 		Vector2 pos = transform.position;
 		// 移動量を加える add displacement
-		pos += direction * this.speed * Time.deltaTime;
+		pos += direction * speed * Time.deltaTime;
 		
 		// プレイヤーの位置が画面内に収まるように制限をかける not to over from the view
 		pos.x = Mathf.Clamp (pos.x, min.x, max.x);
