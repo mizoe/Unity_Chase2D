@@ -34,7 +34,7 @@ followerの速度は自機と同じ値を使います。
 
 ## Description(3)
 
-In addition of (3), followers(green) follows the Player.
+In addition of (2), followers(green) follows the Player.
 Green follower controlled by feedback controller with rigidbody2d.AddForce().
 Because the speed of blue followers(2) are just two status: zero or same as palyer.
 This is impossible in the real world because it requires infinite force.
