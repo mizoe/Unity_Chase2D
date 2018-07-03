@@ -73,4 +73,4 @@ GPLv3
 
 ## Author
 
-[mizoe](https://github.com/mizoe)
+溝江 智徳[mizoe](https://github.com/mizoe)
